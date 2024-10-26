@@ -1,0 +1,89 @@
+/* Root Container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f7f8fa;
+  color: #333;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Logo Styles */
+.logo {
+  height: 6rem;
+  padding: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1.5rem #646cffaa);
+  transform: scale(1.05);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5rem #61dafbaa);
+}
+
+/* Animated Logo Spin */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card Component */
+.card {
+  padding: 2rem;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Documentation Link */
+.read-the-docs {
+  color: #646cff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-the-docs:hover {
+  color: #525cce;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  #root {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+  }
+  .card {
+    background-color: #2b2b2b;
+  }
+  .read-the-docs {
+    color: #8ab4f8;
+  }
+  .read-the-docs:hover {
+    color: #a8c0ff;
+  }
+}
